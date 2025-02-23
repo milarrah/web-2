@@ -1,0 +1,19 @@
+1. Dokumen root adalah direktori utama/direktori pertama dalam sebuah sistem dimana semua file website disimpan dan diakses oleh server web.
+
+2. Tidak harus selalu terletak di C:\xampp\htdocs,tetapi bisa di config sesuai kebutuhan. Namun pada umumnya ketika user mendownload xampp, apache web server terletak pada c:\xampp\htdocs.
+
+3. - git init: perintah yang digunakan untuk membuat/menginisialisasi repository git baru di dalam folder proyek.
+- git clone: perintah yang digunakan untuk menyalin repository yang sudah ada dari remote server ke komputer lokal.
+- git remote: perintah yang digunakan untuk melihat, menambahkan, atau menghapus remote repository (lokasi penyimpanan proyek) yang terhubung dengan repository lokal.
+- git add: perintah yang digunakan untuk menambahkan file yang telah diubah atau baru dibuat ke dalam staging area (tempat sementara) sebelum dilakukan commit.
+- git commit: perintah yang digunakan untuk menyimpan perubahan yang sudah ditambahkan ke dalam repository secara permanen.
+- git push: perintah yang digunakan untuk mengirim/mengunggah perubahan dari repository lokal ke remote repository.
+- git checkout: perintah yang digunakan untuk berpindah ke branch lain atau mengembalikan file ke kondisi/versi tertentu dari riwayat git.
+
+4. Github ialah layanan berbasis cloud yang dimiliki oleh Microsoft, manajemen proyek yang lebih sederhana dan cocok untuk kolaborasi komunitas, pengembang harus menggunakan GitHub Actions atau layanan eksternal lainnya, serta github lebih populer terutama untuk proyek open-source. 
+
+GitLab ialah  platform berbasis open-source yang bisa diinstal secara mandiri, gitlab lebih fleksibel karena memungkinkan self-hosting, cocok untuk perusahaan yang ingin mengelola server sendiri tanpa ketergantungan pada layanan cloud pihak ketiga, GitLab memiliki CI/CD bawaan yang lebih mudah digunakan, GitLab menawarkan kontrol yang lebih mendalam dalam pengelolaan proyek, serta GitLab lebih banyak digunakan dalam lingkungan perusahaan dan organisasi yang membutuhkan kontrol lebih besar.
+
+5. Variabel User adalah variabel lingkungan yang hanya berlaku untuk akun pengguna tertentu dalam system {Gunakan Variabel User jika hanya ingin mengatur sesuatu untuk akun pengguna tertentu}. Variabel System adalah variabel lingkungan yang berlaku untuk seluruh pengguna di komputer {Gunakan Variabel System jika ingin pengaturan berlaku untuk semua pengguna dalam sistem}. 
+
+6. Meskipun variabel sistem digunakan dalam konfigurasi sistem operasi dan variabel konstan digunakan dalam pemrograman, keduanya memiliki kesamaan dalam hal stabilitas, cakupan global, dan perannya dalam mengontrol lingkungan tempat mereka digunakan.
