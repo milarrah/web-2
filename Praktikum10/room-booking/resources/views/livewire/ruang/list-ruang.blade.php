@@ -1,0 +1,59 @@
+<div class="container mx-auto px-4">
+    <h1 class="text-2xl font-bold mb-4 text-pink-600">List Ruang</h1>
+
+    <div class="flex justify-start mb-4">
+        <a
+            href="{{ route('ruang.create') }}"
+            class="bg-pink-600 hover:bg-pink-700 text-white px-4 py-2 rounded font-semibold text-sm"
+        >
+            + Tambah Ruang
+        </a>
+    </div>
+
+    @if (session('message'))
+        <div class="bg-green-100 text-green-800 p-3 rounded mb-4">
+            {{ session('message') }}
+        </div>
+    @endif
+
+    <div class="overflow-x-auto">
+        <table class="min-w-full border-collapse mt-4 text-center">
+            <thead>
+                <tr class="bg-pink-700 text-white">
+                    <th class="py-3 px-4 border border-pink-600">ID</th>
+                    <th class="py-3 px-4 border border-pink-600">Kode</th>
+                    <th class="py-3 px-4 border border-pink-600">Nama</th>
+                    <th class="py-3 px-4 border border-pink-600">Status</th>
+                    <th class="py-3 px-4 border border-pink-600">Aksi</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach ($ruangs as $index => $ruang)
+                    <tr class="{{ $index % 2 === 0 ? 'bg-pink-100' : 'bg-pink-200' }} text-pink-900">
+                        <td class="py-2 px-4 border border-pink-300">{{ $ruang->id }}</td>
+                        <td class="py-2 px-4 border border-pink-300">{{ $ruang->kode }}</td>
+                        <td class="py-2 px-4 border border-pink-300">{{ $ruang->nama }}</td>
+                        <td class="py-2 px-4 border border-pink-300">{{ $ruang->status }}</td>
+                        <td class="py-2 px-4 border border-pink-300">
+                            <div class="flex justify-center gap-2">
+                                <a
+                                    href="{{ route('ruang.edit', $ruang) }}"
+                                    class="bg-yellow-400 hover:bg-yellow-500 text-black font-semibold px-3 py-1 rounded text-sm"
+                                >
+                                    Edit
+                                </a>
+                                <button
+                                    wire:click="delete({{ $ruang->id }})"
+                                    wire:confirm="Yakin ingin menghapus?"
+                                    class="bg-red-600 hover:bg-red-700 text-white px-3 py-1 rounded text-sm"
+                                >
+                                    Delete
+                                </button>
+                            </div>
+                        </td>
+                    </tr>
+                @endforeach
+            </tbody>
+        </table>
+    </div>
+</div>
